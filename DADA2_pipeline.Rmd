@@ -1,0 +1,28 @@
+---
+title: "R Notebook"
+output: github_document
+---
+```{r}
+library(dada2)
+```
+
+```{r}
+path <- "~/MiSeq_SOP" # Change to the directory containing the fastq files after unzipping
+list.files(path)
+
+#Extraire le nom des échantillons à partir du nom des fichiers
+
+# Forward and reverse fastq filenames have format: SAMPLENAME_R1_001.fastq and SAMPLENAME_R2_001.fastq
+fnFs <- sort(list.files(path, pattern="_R1_001.fastq", full.names = TRUE))
+fnRs <- sort(list.files(path, pattern="_R2_001.fastq", full.names = TRUE))
+# Extract sample names, assuming file names have format: SAMPLENAME_XXX.fastq
+sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
+
+
+```
+
+```{r}
+plotQualityProfile(fnFs[1:2])
+
+```
+
