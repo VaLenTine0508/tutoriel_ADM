@@ -50,4 +50,4 @@ sample.names <- sapply(strsplit(basename(fnFs), "_"), `[`, 1)
 plotQualityProfile(fnFs[1:2])
 ```
 
-![](DADA2_pipeline_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](DADA2_pipeline_files/figure-gfm/unnamed-chunk-3-1.png)<!-- --> .
