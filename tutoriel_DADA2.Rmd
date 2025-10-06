@@ -2,6 +2,8 @@
 title: "R Notebook"
 output: github_document
 ---
+
+## **Activation librairie DADA2**
 ```{r, cache=TRUE}
 library(dada2)
 ```
